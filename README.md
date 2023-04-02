@@ -4,11 +4,15 @@ Summary: These are the essentials for connecting your Web API service to the Dat
 
 Create the migration instance:
 ```
+Format: dotnet ef migrations add {NAME} --project {PATH TO THE .csproj}
+example:
 dotnet ef migrations add AddVillaTable --project /Users/ashranbakth/Projects/MagicVilla/MagicVilla_VillaAPI/MagicVilla_VillaAPI.csproj
 ```
 
 Update the database:
 ```
+Format: dotnet ef database update {NAME} --project {PATH TO THE .csproj}
+example:
 dotnet ef database update AddVillaTable --project  /Users/ashranbakth/Projects/MagicVilla/MagicVilla_VillaAPI/MagicVilla_VillaAPI.csproj
 ```
 
