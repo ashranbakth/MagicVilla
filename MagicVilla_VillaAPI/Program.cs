@@ -1,10 +1,14 @@
-﻿
-
+﻿using MagicVilla_VillaAPI.Data;
+using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-
+AppContext.SetSwitch("Npgsql.EnableLegacyTimestampBehavior", true);
+builder.Services.AddDbContext<ApplicationDbContext>(option =>
+{
+    option.UseNpgsql(builder.Configuration.GetConnectionString("DefaultSQLConnection"));
+});
 
 builder.Services.AddControllers(options => {
     //options.ReturnHttpNotAcceptable = true; accepts only json
