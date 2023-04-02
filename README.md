@@ -1,6 +1,6 @@
 # Database migration command (PostgreSQL) for MAC
 
-Summary: These are the essentials for connecting your Web API service to the Database using Entity Framework Core for MAC. You have to use the dotnet CLI to initialize the migration instance and update the database because the nuget pack manager console does not exist on MAC. For this document, this is specifically for PostgreSQL data migration.
+Summary: These are the essentials for connecting your Web API service to the Database using Entity Framework Core for MAC. You have to use the dotnet CLI to initialize the migration instance and update the database because the nugget package manager console does not exist on MAC. For this document, this is specifically for PostgreSQL data migration.
 
 Create the migration instance:
 ```
